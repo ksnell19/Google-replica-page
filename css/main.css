@@ -1,54 +1,58 @@
 body{
-  margin: 0;
+  margin: 0 auto;
+  font-family: arial, sans-serif;
 }
 
 .navbar {
   float: right;
-
 }
 .navbar li {
   font-size: 13px;
   display: inline-block;
   margin-top: 10px;
   margin-right: 25px;
-
 }
-span {
+.navbar li:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.navbar li span {
   background-color: #f2f2f2;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
-li img {
+.myImage {
   border-radius: 25px;
   height: 32px;
   width: 32px;
   top: 10px;
   position: relative;
 }
-.logo {
-  margin-top: 225px;
-  margin-left: 675px;
-  display: inline-block;
-  width: 25%;
-}
 
-.searchEngine {
-    margin-top: 25px;
-    text-align: center;
+div.searchEngine{
+  position: absolute;
+  width: 100%;
+  margin-top: 75px;
 }
-
+.searchEngine img {
+  padding: 142px 0 24px 0;
+  display: block;
+  margin: 0 auto;
+}
 .searchEngine input {
   width: 600px;
   padding: 5px;
+  display: block;
+  margin: 0 auto;
   border-radius: 2px;
   border: 1px solid;
-  font-size: 14px;
+  font-size: 16px;
   border-color: #d9d9d9;
   line-height: 20px;
 }
+.searchEngine input:hover{
+  box-shadow: 1px 1px lightgrey;
+}
+
 .buttons {
   text-align: center;
 }
@@ -63,7 +67,14 @@ li img {
   color: #666666;
   margin: 18px 6px 150px 0;
   padding: 0 12px;
+  opacity: 0.8;
 }
+.buttons button:hover{
+  opacity:1.0;
+  color: #000000;
+  box-shadow: 1px 1px lightgrey;
+}
+
 footer{
   background-color: #f2f2f2;
   color: #666666;
@@ -85,13 +96,45 @@ footer li{
   display: inline-block;
   padding: 0 10px 0 10px;
 }
-
+footer li:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
 footer .left{
   float: left;
   margin-left: 20px;
 }
-
 footer .right {
   float: right;
   margin: 12px 20px 0 120px;
+}
+
+
+@media (max-width:700px) {
+  .myImage {
+    display:none;
+  }
+  div.searchEngine {
+    margin-top: 10px;
+  }
+  .searchEngine input{
+    width: 80%;
+  }
+}
+
+@media (max-width: 595px){
+  footer .left {
+    float: none;
+    text-align: center;
+    margin: 12px 0 auto;
+  }
+  footer .right {
+    float: none;
+    text-align: center;
+    margin: 0 auto;
+    padding: 15px 0 10px 0;
+  }
+  .navbar {
+    text-align: center;
+  }
 }
